@@ -38,6 +38,7 @@
       margin-top: 20px;
     }
 
+    /* Loading bar */
     .progress-box {
       width: 100%;
       background: #eee;
@@ -59,13 +60,13 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
-    /* Floating Hearts */
-    .heart {
+    /* Floating kisses */
+    .kiss {
       position: fixed;
       bottom: -50px;
-      font-size: 24px;
+      font-size: 26px;
       animation: float 6s linear infinite;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     @keyframes float {
@@ -75,12 +76,12 @@
 
     /* Envelope */
     .envelope {
-      width: 320px;
-      height: 200px;
+      width: 340px;
+      height: 220px;
       background: #ffb6c1;
       margin: 30px auto;
       position: relative;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
       overflow: hidden;
       box-shadow: 0 0 20px rgba(255,0,100,0.4);
@@ -120,6 +121,20 @@
     .envelope.open .letter {
       top: 0;
     }
+
+    /* Rose petals */
+    .petal {
+      position: fixed;
+      top: -50px;
+      font-size: 22px;
+      animation: fall 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
   </style>
 </head>
 
@@ -132,15 +147,15 @@
 
 <!-- PAGE 1 -->
 <div class="card" id="page1" style="display:block;">
-  <h1>Hii meri babyyyy 😘😚😙😗😻💋💋💋</h1>
+  <h1>Hii meri babyyyy 😘😘😘😘😘😘😘</h1>
   <p>You are the most beautiful girl in my world 💖</p>
   <button onclick="startLoading()">Click here to load your cuteness</button>
 </div>
 
 <!-- PAGE 2 -->
 <div class="card" id="page2">
-  <h2>Loading your cuteness... 😍</h2>
-  <p>Please wait babyyy 💖</p>
+  <h2>Loading your cuteness... 😘</h2>
+  <p>Please wait babyyy 😘😘</p>
   <div class="progress-box">
     <div class="progress-bar" id="progressBar"></div>
   </div>
@@ -149,10 +164,10 @@
 
 <!-- PAGE 3 -->
 <div class="card" id="page3">
-  <h2>Your cuteness is 150% 😍🔥</h2>
-  <p>Because you are the most beautiful girl in the whole world 💖</p>
+  <h2>Your cuteness is 150% 😘🔥</h2>
+  <p>Because you are the most beautiful girl in the whole world 😘</p>
 
-  <h3>My Favourite Pictures 📸</h3>
+  <h3>My Favourite Pictures 😘📸</h3>
   <img src="photo1.jpg">
   <img src="photo2.jpg">
   <img src="photo3.jpg">
@@ -161,40 +176,59 @@
   <img src="photo6.jpg">
 
   <br>
-  <button onclick="nextPage('page3','page4')">Click here</button>
+  <button onclick="nextPage('page3','page4')">Click here 😘</button>
 </div>
 
 <!-- PAGE 4 LETTER -->
 <div class="card" id="page4">
-  <h2>💌 You got a letter</h2>
+  <h2>💌 You got a love letter 😘</h2>
 
   <div class="envelope" onclick="openLetter()">
     <div class="flap"></div>
     <div class="letter">
-      <h3>Dear Bhumii ❤️</h3>
 
-      <p>
+<h3>Dear Bhumii 😘</h3>
+
+<p>
 Mujhe samajh nahi aa raha main yeh letter kaha se start karu…  
 Aur agar isme likhi kisi bhi baat se tujhe bura lage toh please mujhe maaf kar dena.  
 
-Main sab kuch start se start karta hoon...  
-( yaha tu apna poora emotional letter paste kar dena bilkul same text me )
+Main sab kuch start se start karta hoon.  
+
+Maine tujhe pehli baar tab dekha tha jab tu Simran ke paas tuition aati thi.  
+Main ghar pe TV dekh raha tha aur darwaza khula hua tha.  
+Tu andar aayi thi, purple colour ka top pehna hua tha aur tere baal khule hue the.  
+Uss din se hi mujhe tere liye bohot zyada feelings aani start ho gayi thi.  
+
+Main roz raat ko colony me ghoomta tha sirf tujhe dekhne ke liye.  
+Kabhi dikhti thi, kabhi nahi…  
+Aur jis din tu dikh jaati thi, uss raat mujhe bohot achhi neend aati thi.  
+Main sirf tujhe hi sochta rehta tha.  
+
+Mujhe tera naam bhi nahi pata tha. Phir Hitu ne mujhe tera naam bataya.  
+Maine tujhe Instagram pe dhoondha aur phir Simran ki ID me teri ID mili.  
+
+Tujhe follow karne ki himmat karne me mujhe 5–6 mahine lag gaye the.  
+Aur jab tune meri request accept ki thi tab tak meri phat chuki thi 😅  
+
+Lekin jab se tujhse baat start hui hai, main poora din khush rehta hoon.  
+Tu meri life ka sabse pyaara hissa ban chuki hai 😘  
 
 Thank you so much meri life me aane ke liye.  
-I love you so much 💖
-      </p>
+I love you so much 😘😘😘  
+</p>
 
     </div>
   </div>
 
-  <button onclick="nextPage('page4','page5')">Click here</button>
+  <button onclick="nextPage('page4','page5')">Click here 😘</button>
 </div>
 
 <!-- PAGE 5 -->
 <div class="card" id="page5">
-  <h1>Byeee babyyyy 😘😚😙😗😻💋</h1>
-  <p>I LOVE YOU SOOOOOOO MUCHHHHHHH ❤️</p>
-  <p>Bohot saari kisses sirf tumhare liye 💖💋💋💋</p>
+  <h1>Byeee babyyyy 😘😘😘😘😘</h1>
+  <p>I LOVE YOU SOOOOOOO MUCHHHHHHH 😘</p>
+  <p>Bohot saari kisses sirf tumhare liye 😘😘😘😘😘😘😘😘</p>
 </div>
 
 <script>
@@ -227,18 +261,29 @@ function nextPage(current, next) {
 
 function openLetter(){
   document.querySelector(".envelope").classList.add("open");
+  startPetals();
 }
 
-setInterval(() => {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  document.body.appendChild(heart);
+/* Rose petals */
+function startPetals(){
+  setInterval(() => {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerHTML = "🌹";
+    petal.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(petal);
+    setTimeout(() => petal.remove(), 6000);
+  }, 400);
+}
 
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
+/* Flying kisses */
+setInterval(() => {
+  const kiss = document.createElement("div");
+  kiss.className = "kiss";
+  kiss.innerHTML = "😘";
+  kiss.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(kiss);
+  setTimeout(() => kiss.remove(), 6000);
 }, 500);
 </script>
 
