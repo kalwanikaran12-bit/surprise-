@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My Baby ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      text-align: center;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5, #fbc2eb, #ffd1ff);
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 25px;
+      padding: 25px;
+      max-width: 750px;
+      margin: 40px auto;
+      box-shadow: 0 0 25px rgba(255,105,180,0.6);
+      display: none;
+    }
+
+    h1, h2 {
+      color: #ff2f6d;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .progress-box {
+      width: 100%;
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      height: 20px;
+      width: 0%;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      transition: width 0.3s;
+    }
+
+    img {
+      width: 250px;
+      margin: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -50px;
+      font-size: 24px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-110vh); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="card" id="page1" style="display:block;">
+  <h1>Hii meri babyyyy 😘😚😙😗😻💋💋💋</h1>
+  <p>You are the most beautiful girl in my world 💖</p>
+  <button onclick="startLoading()">Click here to load your cuteness</button>
+</div>
+
+<!-- PAGE 2 LOADING -->
+<div class="card" id="page2">
+  <h2>Loading your cuteness... 😍</h2>
+  <p>Please wait babyyy 💖</p>
+
+  <div class="progress-box">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <p id="percent">0%</p>
+</div>
+
+<!-- PAGE 3 -->
+<div class="card" id="page3">
+  <h2>Your cuteness is 150% 😍🔥</h2>
+  <p>Because you are the most beautiful girl in the whole world 💖</p>
+
+  <h3>My Favourite Pictures 📸</h3>
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+  <img src="photo5.jpg">
+  <img src="photo6.jpg">
+
+  <br>
+  <button onclick="nextPage('page3','page4')">Click here</button>
+</div>
+
+<!-- PAGE 4 LETTER -->
+<div class="card" id="page4">
+  <h2>💌 Dear Bhumii</h2>
+
+  <p style="text-align:left; font-size:17px; line-height:1.7">
+
+Mujhe samajh nahi aa raha main yeh letter kaha se start karu…  
+Aur agar isme likhi kisi bhi baat se tujhe bura lage, toh please mujhe maaf kar dena.  
+Main sab kuch start se start karta hoon. ❤️<br><br>
+
+Maine tujhe pehli baar tab dekha tha jab tu Simran ke paas tuition aati thi.  
+Main ghar pe TV dekh raha tha aur darwaza khula hua tha.  
+Tu andar aayi thi, purple colour ka top pehna hua tha aur tere baal khule hue the.  
+Uss din se hi mujhe tere liye bohot zyada feelings aani start ho gayi thi.<br><br>
+
+Main roz raat ko colony me ghoomta tha sirf tujhe dekhne ke liye.  
+Kabhi dikhti thi, kabhi nahi…  
+Aur jis din tu dikh jaati thi, uss raat mujhe bohot achhi neend aati thi.  
+Main sirf tujhe hi sochta rehta tha.<br><br>
+
+Mujhe tera naam bhi nahi pata tha. Phir Hitu ne mujhe tera naam bataya.  
+Maine tujhe Instagram pe dhoondha, phir Simran ki ID me jaakar teri ID mili.<br><br>
+
+Sach bolu toh tujhe follow karne ki himmat karne me mujhe 5–6 mahine lag gaye the.  
+Aur jab tune meri request accept ki thi tab tak meri phat chuki thi 😅<br><br>
+
+Lekin jab se tujhse baat start hui hai, main poora din khush rehta hoon.  
+Tu meri life ka sabse pyaara hissa ban chuki hai ❤️<br><br>
+
+Thank you so much meri life me aane ke liye.  
+I love you so much 💖
+
+  </p>
+
+  <button onclick="nextPage('page4','page5')">Click here</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="card" id="page5">
+  <h1>Byeee babyyyy 😘😚😙😗😻💋</h1>
+  <p>I LOVE YOU SOOOOOOO MUCHHHHHHH ❤️</p>
+  <p>Bohot saari kisses sirf tumhare liye 💖💋💋💋</p>
+</div>
+
+<script>
+function startLoading() {
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("page2").style.display = "block";
+
+  let progress = 0;
+  let bar = document.getElementById("progressBar");
+  let percent = document.getElementById("percent");
+
+  let interval = setInterval(function() {
+    progress += 5;
+    bar.style.width = progress + "%";
+    percent.innerText = progress + "%";
+
+    if(progress >= 100) {
+      clearInterval(interval);
+      setTimeout(function() {
+        document.getElementById("page2").style.display = "none";
+        document.getElementById("page3").style.display = "block";
+      }, 500);
+    }
+  }, 200);
+}
+
+function nextPage(current, next) {
+  document.getElementById(current).style.display = "none";
+  document.getElementById(next).style.display = "block";
+}
+
+// Floating hearts
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 500);
+</script>
+
+</body>
+</html>
